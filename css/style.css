@@ -11,7 +11,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
 }
 
 .clear-fix {
@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #FFD700;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #5f9341;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,14 +42,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #5f9341;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #5f9341;
   line-height: 17px;
 }
 
@@ -81,12 +81,12 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: #696969;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
+  color: #85bb65;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -95,41 +95,41 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #FAFAD2;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #FFD700;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.goldenrod {
+  background-color: #FAFAD2;
 }
 
-.orange-text {
-  color: #f5ae23;
+.gold-text {
+  color: #FFD700;
 }
 
-.white-text {
+.goldenrod-text {
   font-weight: bold;
-  color: #fff;
+  color: #FAFAD2;
 }
 
-.gray {
-  background-color: #f3f3f3;
+.goldenrodtwo {
+  background-color: #FAFAD2;
   padding-bottom: 10px;
   clear: both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.money-green {
+  background-color: #5f9341;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #5f9341;
 }
 
 .flex-box {

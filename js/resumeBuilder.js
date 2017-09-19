@@ -21,25 +21,25 @@ var work = {
     "jobs": [{
         "employer": "Sparkly",
         "title": "Data Analyst",
-        "location": "Anywehere, USA",
+        "location": "New York, NY",
         "dates": "July 2017 - Present",
         "description": "Analyze data across various platforms including AdWords, Facebook Ads, Bing Ads, Datorama, Prisma, etc. Implement pacing based on the data, budgets, spends, and event. Create ads for client and maitntain social and media sites"
     }, {
         "employer": "Coup",
         "title": "Captain/Mentor",
-        "location": "Anywhere, USA",
+        "location": "New York, NY",
         "dates": "January 2016 - Present",
         "description": "As Captain I mentored 16 students per semster, teaching digital marketing skills and soft skills to obtain a career in the industry."
     }, {
         "employer": "The Path",
         "title": "SEO Analyst",
-        "location": "Anywhere, USA",
+        "location": "New York, NY",
         "dates": "June 2016 - December 2016",
         "description": "Perfomred SEO audit on over 20 client accounts. Posted content for websites and blogs that increased organic reach including moving to page 1 on all seach enginges for 55% of clients."
     }, {
         "employer": "Sustainble Research",
         "title": "Techincal Coordinator",
-        "location": "Anywhere, USA",
+        "location": "New York, NY",
         "dates": "June 2010 - January 2013",
         "description": "Developed a sustainability projects database, generated reports, and presentation graphs for staff access. Created a newsletter, booklets, and web mailer for projects that reached 500 subscribers. Feasibility research and analysis on project goals, costs, and environmental impact to fund projects."
     }]
@@ -156,7 +156,7 @@ education.display();
 
 projects.display = function() {
 
-    // Start the loop
+    // Start of the loop
     projects.projects.forEach(function(project) {
         $('#projects').append(HTMLprojectStart);
 
@@ -187,21 +187,23 @@ map.display();
 
 work.display = function() {
 
-    for (job in work.jobs) {
+    //for (job in work.jobs) 
+    work.jobs.forEach(function(job) {
         $("#workExperience").append(HTMLworkStart);
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+        var formattedLocation = HTMLworkLocation.replace("%data%", job.location);
         var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
         $(".work-entry:last").append(formattedEmployerTitle, formattedLocation);
 
-        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        var formattedDates = HTMLworkDates.replace("%data%", job.dates);
         $(".work-entry:last").append(formattedDates);
 
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
         $(".work-entry:last").append(formattedDescription);
-    }
+    });
 };
 work.display();
 
@@ -215,10 +217,11 @@ $(document).click(function(loc) {
 function locationizer(work_obj) {
     var locationArray = [];
 
-    for (job in work_obj.jobs) {
-        var newLocation = work_obj.jobs[job].location;
+    //for (job in work_obj.jobs) 
+    work_obj.jobs.forEach(function(job) {
+        var newLocation = job.location;
         locationArray.push(newLocation);
-    }
+    });
     return locationArray;
 }
 
@@ -228,7 +231,7 @@ function inName(name) {
     name = name.trim().split(" ");
     console.log(name);
     name[1] = name[1].toUpperCase();
-    name[0] = name[0].slice(0, 1).toUpperCase(); + name[0].slice(1).toLowerCase();
+    name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
 
     return name[0] + " " + name[1];
 }
